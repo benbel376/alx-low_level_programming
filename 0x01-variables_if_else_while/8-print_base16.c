@@ -9,16 +9,16 @@
  */
 int main(void)
 {
-int ch1;
-char ch2;
+int cha;
+char chb;
 
-for (ch1 = 0; ch1 <= 9; ch1++)
+for (cha = 0; cha <= 9; cha++)
 {
-putchar(ch1 % 10 + '0');
+putchar(cha % 10 + '0');
 }
-for (ch2 = 'a'; ch2 <= 'f'; ch2++)
+for (chb = 'a'; chb <= 'f'; chb++)
 {
-putchar(ch2);
+putchar(chb);
 }
 putchar('\n');
 }
