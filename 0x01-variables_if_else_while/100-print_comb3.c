@@ -10,9 +10,9 @@
 int main(void)
 {
 int cha;
+int chb;
 for (cha = 0; cha <= 8; cha++)
 {
-int chb;
 for (chb = 0; chb <= 9; chb++)
 {
 if (cha == chb)
