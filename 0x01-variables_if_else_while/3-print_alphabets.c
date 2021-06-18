@@ -1,24 +1,23 @@
-#include<stdlib.h>
 #include<stdio.h>
 /**
- * main - Entry point
- *
- * Description: printing lower and uper case latters
- *
+ * main - prints lower and uper case
  * Return: 0
  */
 int main(void)
 {
-char ch1;
-char ch2;
+char a = 'a';
 
-for (ch1 = 'a'; ch1 <= 'z'; ch1++)
+while (a <= 'z')
 {
-putchar(ch1);
+putchar(a);
+a++;
 }
-for (ch2 = 'A'; ch2 <= 'Z'; ch2++)
+a = 'A';
+while (a <= 'Z')
 {
-putchar(ch2);
+putchar(a);
+a++;
 }
 putchar('\n');
+return (0);
 }
