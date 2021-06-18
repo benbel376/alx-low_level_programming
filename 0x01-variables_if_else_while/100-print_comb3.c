@@ -13,7 +13,7 @@ int cha;
 int chb;
 for (cha = 0; cha <= 8; cha++)
 {
-for (chb = 0; chb <= 9; chb++)
+for (chb = cha; chb <= 9; chb++)
 {
 if (cha == chb)
 {
