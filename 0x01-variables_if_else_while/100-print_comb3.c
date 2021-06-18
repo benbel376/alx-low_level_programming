@@ -13,18 +13,23 @@ int cha;
 for (cha = 0; cha <= 8; cha++)
 {
 int chb;
-for (chb = 1; chb <= 9; chb++)
+for (chb = 0; chb <= 9; chb++)
 {
-
+if (cha == chb)
+{
+continue;
+}
 putchar(cha % 10 + '0');
 putchar(chb % 10 + '0');
 if (cha == 8 && chb == 9)
 {
-continue;
+break;
 }
 putchar(',');
 putchar(' ');
+
 }
+chb++;
 }
 return (0);
 }
