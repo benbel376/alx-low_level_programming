@@ -31,5 +31,6 @@ putchar(' ');
 }
 chb++;
 }
+putchar('\n');
 return (0);
 }
