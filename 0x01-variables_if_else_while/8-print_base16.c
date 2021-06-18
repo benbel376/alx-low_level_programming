@@ -21,4 +21,5 @@ for (chb = 'a'; chb <= 'f'; chb++)
 putchar(chb);
 }
 putchar('\n');
+return (0);
 }
