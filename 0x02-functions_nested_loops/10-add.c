@@ -1,19 +1,12 @@
 #include "holberton.h"
-
 /**
- * add - add two integers and return the results
- *
- * @i: first input parameter hard coded in main
- *
- * @j: second input parameter hard coded in main
- *
- * Return: void
- */
-
+*add-adds to numbers i and j
+*@i:number 1
+*@j:bumber 2
+*Return: returns i + j
+*/
 int add(int i, int j)
 {
-	int m;
-
-	m = i + j;
-	return (m);
+	return (i + j);
 }
+

@@ -1,47 +1,26 @@
-#include "holberton.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * print_to_98 - add two integers and return the results
- *
- * @n:  input parameter hard coded in main
- *
- * Return: void
+ * print_to_98 - prints every number from n to 98
+ * @n: starting number
  */
-
 void print_to_98(int n)
 {
+
 	int i;
 
 	if (n <= 98)
 	{
-	for (i = n; i <= 98; i++)
+		for (i = n; i < 98; i++)
+		{
+			printf("%i, ", i);
+		}
+	} else
 	{
-		if (i != 98)
+		for (i = n; i > 98; i--)
 		{
-			printf("%d, ", i);
-		}
-		else
-		{
-			printf("%d", i);
+			printf("%i, ", i);
 		}
 	}
-	printf("\n");
-	}
-	else if (n > 98)
-	{
-	for (i = n; i >= 98; i--)
-	{
-		if (i != 98)
-		{
-			printf("%d, ", i);
-		}
-		else
-		{
-			printf("%d", i);
-		}
-	}
-	printf("\n");
-	}
+	printf("98\n");
 }

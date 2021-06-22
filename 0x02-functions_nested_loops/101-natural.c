@@ -1,40 +1,116 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <stdlib.h>
+/**
+ *powB - raises the number base to power power
+ *@base : the base
+ *@power : the power
+ *Return: return the answer
+ */
+int powB(int base, int power)
+{
+	int i, prod = 1;
+
+	for (i = 0; i < power; i++)
+	{
+		prod = prod * base;
+	}
+	return (prod);
+}
 
 /**
- * natural - words
- *
- * @a: parameter hard-coded in main
- * @b: parameter hard-coded in main
- * @N: parameter hard-coded in main
- *
- * Return: sum of all the multiples, ans
+ *numLength - returns the lenth of string
+ *@num : operand number
+ *Return: number of digits
  */
-
-int natural(int a, int b, int N)
+int numLength(int num)
 {
-	int i;
-	int j;
-	int suma;
-	int sumb;
-	int ans;
+	int length = 0;
 
-/*
- * number of multiples
- */
-	i = N / a;
-	j = N / b;
-/*
- * sum of i, j natural numbers for a, b (respectively)
- */
-	suma = (i * (i + 1)) / 2;
-	sumb = (j * (j + 1)) / 2;
+	if (!num)
+	{
+		return (1);
+	}
 
-/*
- * sum of multiples
+	while (num)
+	{
+		num = num / 10;
+		length += 1;
+	}
+
+
+	return (length);
+}
+
+/**
+ *putnchar - Print a number of any any digit
+ *@num : takes an input number
+ *
+ *
  */
-	ans = (a * suma) + (b * sumb);
-	printf("%d\n", ans);
+void putnchar(int num)
+{
+
+	int length = numLength(num), j = length - 1, k, tmp2, digit1;
+
+	if (num == 0)
+		_putchar(48);
+	else
+	{
+
+		while (j >= 0)
+		{
+			if (num % powB(10, j) == 0 && j != 0)
+			{
+				_putchar(48 + num / powB(10, j));
+				for (k = j; k > 0 ; k--)
+				{
+					_putchar(48);
+				}
+				j = -1;
+			}
+			else
+			{
+				digit1 = num / powB(10, j);
+				_putchar(digit1 + 48);
+				tmp2 = num;
+				num -= powB(10, j) * digit1;
+				if (numLength(tmp2) - numLength(num) == 2)
+				{
+					_putchar(48);
+					j--;
+				}
+				j--;
+			}
+		}
+	}
+
+}
+/**
+ * sumr - returns the sum of numbers from start to end with step steps
+ * @start: the first number
+ * @end: the last number
+ *@step:the number of  steps
+ * Return: sum
+ */
+int sumr(int start, int end, int step)
+{
+	int sum = 0, i;
+
+	for (i = start; i < end; i += step)
+	{
+		sum += i;
+	}
+	return (sum);
+
+}
+/**
+ * main - prints the sum of all numbers under 1024
+ * that are divisible by 3 or 5
+ * Return: 0
+ */
+int main(void)
+{
+
+	putnchar(sumr(3, 1024, 3) + sumr(5, 1024, 5) - sumr(15, 1024, 15));
+	_putchar('\n');
 	return (0);
 }
