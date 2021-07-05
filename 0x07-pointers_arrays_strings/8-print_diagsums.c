@@ -16,11 +16,11 @@ int c = 0;
 int d = 0;
 for (i = 0; i < size; i++)
 {
-c = c + *(*(a + i) + i);
+c = c + *(a + (i * (1 + size)));
 }
 for (j = 0; j < size; j++)
 {
-d = d + *(*(a + j) + (size - (1 + j)));
+d = d + *(a + ((j + 1) * (size - 1)));
 }
 printf("%d, %d\n", c, d);
 }
