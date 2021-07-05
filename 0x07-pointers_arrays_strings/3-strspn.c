@@ -9,19 +9,24 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-unsigned int count = 0;
-while (accept)
+unsigned int res = 0;
+int i, foundChar;
+
+while (*s)
 {
-while (s)
+for (i = 0; accept[i]; i++)
 {
-if (*s == *accept)
+foundChar = 0;
+if (*s == accept[i])
 {
-count++;
+res++;
+foundChar = 1;
 break;
 }
+}
+if (!foundChar)
+break;
 s++;
 }
-accept++;
-}
-return (count);
+return (res);
 }
