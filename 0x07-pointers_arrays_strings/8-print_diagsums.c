@@ -20,7 +20,7 @@ c = c + *(*(a + i) + i);
 }
 for (j = 0; j < size; j++)
 {
-d = d + *(*(a + j) + (size -(1 + j)) );
+d = d + *(*(a + j) + (size - (1 + j)));
 }
 printf("%d, %d\n", c, d);
 }
