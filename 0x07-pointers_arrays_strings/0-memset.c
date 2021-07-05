@@ -15,6 +15,6 @@ for (c = 0; c <= n; c++)
 s = b;
 *s++;
 }
-*s -= n;
-return (*s);
+
+return (s);
 }
