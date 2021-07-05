@@ -1,1 +1,1 @@
-description of the files
+# 0x07. C - Even more pointers, arrays and strings
