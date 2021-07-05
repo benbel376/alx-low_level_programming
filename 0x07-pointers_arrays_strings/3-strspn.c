@@ -9,23 +9,19 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int count;
-
-	while (*s != '\0')
-	{
-		while (*accept != '\0')
-		{
-			if (*s == *accept)
-				break;
-			count++;
-			accept++;
-
-			s++;
-
-		}
-		if (*accept == '\0')
-			break;
-
-	}
-	return (count + 1);
+unsigned int count = 0;
+while (accept)
+{
+while (s)
+{
+if (*s == *accept)
+{
+count++;
+break;
+}
+s++;
+}
+accept++;
+}
+return (count);
 }
