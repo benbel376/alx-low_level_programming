@@ -10,15 +10,14 @@
 
 int main(int argc, char **argv)
 {
-  int fir;
-  int sec;
+int fir, mul, sec;
 if (argc == 3)
 {
-  fir = atoi(*(argv += 1));
-  argv -= 1;
-  sec = atoi(argv[2]);
-  printf("%i\n", fir * sec);
-  return  (0);
+fir = atoi(*(argv += 1));
+sec = atoi(argv[1]);
+mul = (int)(fir *sec);
+printf("%i\n", mul);
+return  (0);
 }
 printf("error");
 return (1);
