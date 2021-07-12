@@ -11,13 +11,10 @@
 int main(int argc, char **argv)
 {
 
-
-if (**argv == '\0')
+while (argc--)
 {
-printf("the argument is empty");
+printf("%s\n", *(argv++));
 }
-printf("%d\n", argc);
-
 exit(EXIT_SUCCESS);
 
 }
