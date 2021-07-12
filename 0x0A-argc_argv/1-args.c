@@ -1,23 +1,19 @@
 #include "holberton.h"
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdio.h>
+
 /**
- * main - this function prints the name of the program.
- * @argc: count of the command line arguments
- * @argv: the command line arguments
- * Return: EXIT_SUCCESS
+ * main - prints the number of arguments passed into it
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0
  */
-
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
+	int sum = 0;
 
-
-if (**argv == '\0')
-{
-printf("the argument is empty");
-}
-printf("%d\n", argc);
-
-exit(EXIT_SUCCESS);
-
+	(void)argv;
+	while (--argc)
+		sum++;
+	printf("%i\n", sum);
+	return (0);
 }
