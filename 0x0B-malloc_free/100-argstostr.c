@@ -17,7 +17,7 @@ int i, j;
 if (ac == 0 || av == NULL)
 {
 str = malloc(sizeof(av));
-if (!s)
+if (!str)
 {
 return (NULL);
 }
