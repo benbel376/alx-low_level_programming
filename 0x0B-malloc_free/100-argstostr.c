@@ -16,6 +16,8 @@ char *str;
 int i, j;
 if (ac == 0 || av == NULL)
 {
+return (NULL);
+}
 str = malloc(sizeof(char *) * ac);
 if (str)
 {
