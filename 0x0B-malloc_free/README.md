@@ -1,1 +1,2 @@
-** 0-create_array.c: holds the create_array function**
+# 0x0B. C - malloc, free
+Practicing malloc with c
