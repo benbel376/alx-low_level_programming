@@ -31,7 +31,6 @@ j++;
 }
 *str += '\n';
 }
-return (str);
 }
-return (NULL);
+return (str);
 }
