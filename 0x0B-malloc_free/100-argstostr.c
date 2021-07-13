@@ -13,7 +13,7 @@ int wrdcnt(int ac, char **s)
 int j, i, n = 0;
 for (j = 0; j < ac; j++)
 {
-for (i = 0; s[j][i], i++)
+for (i = 0; s[j][i]; i++)
 {
 if (s[j][i] == ' ')
 {
