@@ -15,5 +15,6 @@ char **strtow(char *str);
 int countWords(char *s);
 int endIndex(char *s, int index);
 int startIndex(char *s, int index);
+char *argstostr(int ac, char **av);
 
 #endif /* HOLBERTON_H */
