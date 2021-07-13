@@ -2,23 +2,43 @@
 #include "holberton.h"
 
 /**
- * create_array - creates an array of chars,
- * and initializes it with a specific char
- * @size: size of array
- * @c: char to fill array with
+ * wrdcnt - counts the number of words in a string
+ * argstostr - concantnates strings
+ * @ac: size of array
+ * @av: char to fill array with
  * Return: string of chars
  */
+int wrdcnt(int ac, char **s)
+{
+int j, i, n = 0;
+for (j = 0; j < ac; j++)
+{
+for (i = 0; s[j][i], i++)
+{
+if (s[j][i] == ' ')
+{
+if (s[j][i+1] != ' ' && s[j][i+1] != '\0')
+n++;
+}
+else if (i == 0)
+n++;
+}
+n++;
+}
+return (n);
+}
 
 char *argstostr(int ac, char **av)
 {
 
 char *str;
-int i, j;
+int i, n, j;
 if (ac == 0 || av == NULL)
 {
 return (NULL);
 }
-str = malloc(sizeof(**av));
+n = wrdcnt(ac, av);
+str = malloc(sizeof(char *) * n);
 for (i = 0; i < ac; i++)
 {
 j = 0;
