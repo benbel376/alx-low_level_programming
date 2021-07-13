@@ -18,11 +18,7 @@ if (ac == 0 || av == NULL)
 {
 return (NULL);
 }
-str = malloc(sizeof(char *) * ac);
-if (str)
-{
-return (NULL);
-}
+str = malloc(sizeof(**av));
 for (i = 0; i < ac; i++)
 {
 j = 0;
