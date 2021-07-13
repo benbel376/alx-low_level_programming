@@ -1,6 +1,8 @@
 #include "holberton.h"
 
 /**
+ * startIndex - starts index
+ * endIndex - end of index
  * strtow - splits a string into words
  * @str: string of words to be split
  * Return: double pointer to strings

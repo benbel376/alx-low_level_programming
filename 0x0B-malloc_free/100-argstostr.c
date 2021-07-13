@@ -11,12 +11,12 @@
 
 char *argstostr(int ac, char **av)
 {
-char **s;
+
 char *str;
 int i, j;
 if (ac == 0 || av == NULL)
 {
-s= malloc(sizeof(av));
+str = malloc(sizeof(av));
 if (!s)
 {
 return (NULL);
