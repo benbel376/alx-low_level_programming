@@ -1,2 +1,2 @@
-# More of Malloc and Free
-<h3> You can allocate, free as well as exit </h3>
+# 0x0C. C - More malloc, free
+More malloc exercise in c
