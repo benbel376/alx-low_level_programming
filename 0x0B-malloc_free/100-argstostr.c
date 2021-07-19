@@ -3,7 +3,7 @@
 
 /**
  * wrdcnt - counts the number of words in a string
- * argstostr - concantnates strings
+ * *argstostr - concantnates strings
  * @s: argument of wrdcnt
  * @ac: size of array
  * @av: char to fill array with
@@ -35,11 +35,12 @@ char *argstostr(int ac, char **av)
 char *str;
 int i, n, j;
 n = wrdcnt(ac, av);
+
 if (ac == 0 || av == NULL)
 {
 return (NULL);
 }
-str = malloc(8 * n);
+str = malloc(sizeof(char *) * n);
 for (i = 0; i < ac; i++)
 {
 j = 0;
