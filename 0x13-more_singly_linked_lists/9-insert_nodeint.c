@@ -29,7 +29,7 @@ while (idx != 1)
 {
 current = current->next;
 --idx;
-if (current== NULL)
+if (current == NULL)
 {
 free(new);
 return (NULL);
