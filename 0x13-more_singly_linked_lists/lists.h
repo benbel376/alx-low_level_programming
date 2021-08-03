@@ -8,7 +8,5 @@ typedef struct listint_t
   struct listint_t *next;
 } listint_t;
 
-typedef int size_t;
-
 size_t print_listint(const listint_t *h);
 #endif
