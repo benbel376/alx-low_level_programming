@@ -1,0 +1,21 @@
+#include <stddef.h>
+#include "lists.h"
+#include <stdlib.h>
+#include <stdio.h>
+/**
+ * add_nodeint - prints the content of the list
+ * @head: takes in a list pointer
+ * @n: data;
+ * Return: size_t which s int
+ */
+
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+listint_t *header = NULL;
+
+header = malloc(sizeof(listint_t));
+header->n = n;
+header->next = *head;
+
+return (header);
+}
