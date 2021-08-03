@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * print_listint - prints the content of the list
+ * listint_len - prints the content of the list
  * @h: takes in a list pointer
  *
  * Return: size_t which s int
