@@ -1,21 +1,19 @@
-#include <stddef.h>
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
-/**
- * listint_len - prints the content of the list
- * @h: takes in a list pointer
- *
- * Return: size_t which s int
- */
 
+/**
+ * listint_len - returns the number of elements in a
+ * linked listint_t list
+ * @h: pointer to head of list
+ * Return: number of elements
+ */
 size_t listint_len(const listint_t *h)
 {
-size_t n = 0;
-while (h != NULL)
-{
-h = (*h).next;
-n = n + 1;
-}
-return (n);
+	register size_t count = 0;
+
+	while (h)
+	{
+		h = h->next;
+		count++;
+	}
+	return (count);
 }

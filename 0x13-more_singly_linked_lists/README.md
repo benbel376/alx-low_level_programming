@@ -1,1 +1,2 @@
-** linked lists more exercises**
+# 0x13. C - More singly linked lists
+More linked list exercise with c
