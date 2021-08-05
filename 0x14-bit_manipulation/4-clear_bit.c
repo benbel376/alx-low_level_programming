@@ -1,38 +1,20 @@
+#include "main.h"
 #include "holberton.h"
-#define  BIT_SIZE 8
-/**
- * powX - powers a number b to the p's power
- * @b: base
- * @p: power
- * Return: return b to the power of a
- */
-unsigned long int powX(int b, int p)
-{
-	unsigned long int ans = 1;
-
-	while (p)
-	{
-		ans *= b;
-		p--;
-	}
-	return (ans);
-}
 
 /**
- * clear_bit - sets bit to zero at index index
- * @n: input integer
- * @index: returns the value of a bit at a given index
- * Return: 1 for ssucess -1 for failure
+ * clear_bit - sets the value of a bit to 0 at a given index.
+ * @n: number to set
+ * @index: index at which to set bit
+ *
+ * Return: 1 if it worked, or -1 if an error occurred
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int test;
+	unsigned long int set;
 
-	if (index > sizeof(n) * BIT_SIZE - 1)
+	if (index > (sizeof(unsigned long int) * 8 - 1))
 		return (-1);
-
-	test = powX(2, index);
-	*n = (*n & test) ? *n ^ test : *n;
+	set = ~(1 << index);
+	*n = *n & set;
 	return (1);
-
 }

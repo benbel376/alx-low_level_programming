@@ -1,39 +1,22 @@
+#include "main.h"
 #include "holberton.h"
-/**
- * powX-powers a number b to the p's power
- * @b: base
- * @p : power
- * Return: return b to the power of a
- */
-unsigned long int powX(int b, int p)
-{
-	unsigned long int ans = 1;
-
-	while (p)
-	{
-		ans *= b;
-		p--;
-	}
-	return (ans);
-}
 
 /**
- * get_bit - returns the value at an index
- * @n: input unsigned long
- * @index: index to return
- * Return: value at input index
+ * get_bit - returns the value of a bit at a given index.
+ * @n: number to check bits in
+ * @index: index at which to check bit
+ *
+ * Return: value of the bit, or -1 if there is an error
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int test;
+	unsigned long int divisor, check;
 
-	if (index > sizeof(n) * BIT_SIZE - 1)
+	if (index > (sizeof(unsigned long int) * 8 - 1))
 		return (-1);
-
-
-	test = powX(2, index);
-	if (test & n)
+	divisor = 1 << index;
+	check = n & divisor;
+	if (check == divisor)
 		return (1);
-	else
-		return (0);
+	return (0);
 }

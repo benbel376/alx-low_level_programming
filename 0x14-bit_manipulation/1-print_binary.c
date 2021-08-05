@@ -1,51 +1,49 @@
+#include "main.h"
 #include "holberton.h"
-#define BIT_SIZE 8
 
 /**
- * powX - powers a number b to the p's power
- * @b : base
- * @p : power
- * Return: return b to the power of a
+ * _pow - calculates (base ^ power)
+ * @base: base of the exponent
+ * @power: power of the exponent
+ *
+ * Return: value of (base ^ power)
  */
-unsigned long int powX(int b, int p)
+unsigned long int _pow(unsigned int base, unsigned int power)
 {
-	unsigned long int ans = 1;
+	unsigned long int num;
+	unsigned int i;
 
-	while (p)
-	{
-		ans *= b;
-		p--;
-	}
-	return (ans);
+	num = 1;
+	for (i = 1; i <= power; i++)
+		num *= base;
+	return (num);
 }
 
 /**
- * print_binary - prints the binary representation of a number
- * @n: input integer
+ * print_binary - prints a number in binary notation
+ * @n: number to print
+ *
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int test = powX(2, sizeof(unsigned long int) * BIT_SIZE - 1);
-	int start = 0;
+	unsigned long int divisor, check;
+	char flag;
 
-	if (n == 0)
+	flag = 0;
+	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
+	while (divisor != 0)
 	{
-		_putchar('0');
-		return;
-	}
-	while (test)
-	{
-		if (!(test & n) && start)
+		check = n & divisor;
+		if (check == divisor)
+		{
+			flag = 1;
+			_putchar('1');
+		}
+		else if (flag == 1 || divisor == 1)
 		{
 			_putchar('0');
 		}
-		else if (test & n)
-		{
-			_putchar('1');
-			start = 1;
-		}
-		test = test >> 1;
+		divisor >>= 1;
 	}
-
 }
-
